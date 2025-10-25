@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://cj755t6vwd586"]
 
-[ext_resource type="Script" uid="uid://bicosvsbbbpdu" path="res://scripts/audio_controller.gd" id="1_41o6r"]
+[ext_resource type="Script" uid="uid://bicosvsbbbpdu" path="res://scripts/mgrs/mgr-audio-controller.gd" id="1_41o6r"]
 [ext_resource type="AudioStream" uid="uid://cl2msyq454l87" path="res://music/Iron Age 05.mp3" id="2_2e0id"]
 [ext_resource type="AudioStream" uid="uid://d0jh3ila24jql" path="res://music/Iron Age 06.mp3" id="3_lp5i4"]
 [ext_resource type="AudioStream" uid="uid://btamwxqhat01g" path="res://music/Iron Age 09.mp3" id="4_acs82"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc4p6doiwt31h"]
+[gd_scene load_steps=8 format=3 uid="uid://dc4p6doiwt31h"]
 
 [ext_resource type="Theme" uid="uid://dlwpgtq4i50gd" path="res://themes/MainTheme.tres" id="1_bddoy"]
 [ext_resource type="Script" uid="uid://bkn80dvsunh5k" path="res://scripts/audio-menu.gd" id="2_bddoy"]
-[ext_resource type="Texture2D" uid="uid://c2eheveehi134" path="res://images/logo-RTP-white.png" id="3_qtqw2"]
-[ext_resource type="Script" uid="uid://xk7eawboqn8g" path="res://scripts/btn-restore-defaults.gd" id="4_kkq3n"]
-[ext_resource type="Script" uid="uid://daxe8gn3yrocu" path="res://scripts/btn-back.gd" id="4_obhy0"]
+[ext_resource type="Script" uid="uid://bjif6pnsml760" path="res://scenes/gui/main-menu/ui_scale.gd" id="3_6hxqn"]
+[ext_resource type="Texture2D" uid="uid://c2eheveehi134" path="res://images/logos/logo-RTP-white.png" id="3_qtqw2"]
+[ext_resource type="Script" uid="uid://xk7eawboqn8g" path="res://scripts/btns/btn-restore-defaults.gd" id="4_kkq3n"]
+[ext_resource type="Script" uid="uid://daxe8gn3yrocu" path="res://scripts/btns/btn-back.gd" id="4_obhy0"]
 [ext_resource type="PackedScene" uid="uid://cayd1vgimtgui" path="res://scenes/gui/popups/popup-OK.tscn" id="5_qtqw2"]
 
 [node name="gui-control" type="Control"]
@@ -17,13 +18,13 @@ grow_vertical = 2
 theme = ExtResource("1_bddoy")
 script = ExtResource("2_bddoy")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_6hxqn")
+
 [node name="hbox-a" type="HBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 1022.0
+offset_bottom = 710.0
 theme_override_constants/separation = 0
 
 [node name="l-column" type="MarginContainer" parent="hbox-a"]
@@ -119,7 +120,7 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 20
 
-[node name="btn-defaults" type="Button" parent="hbox-a/l-column/l-vbox/btn-margin2/btn-vbox"]
+[node name="btn-restore_defaults" type="Button" parent="hbox-a/l-column/l-vbox/btn-margin2/btn-vbox"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "RESTORE DEFAULTS"
@@ -227,3 +228,4 @@ layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="popup-OK" parent="." instance=ExtResource("5_qtqw2")]
+visible = false

@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0gkgixhemk27"]
+[gd_scene load_steps=7 format=3 uid="uid://d0gkgixhemk27"]
 
-[ext_resource type="Texture2D" uid="uid://c2eheveehi134" path="res://images/logo-RTP-white.png" id="1_6ban0"]
+[ext_resource type="Texture2D" uid="uid://c2eheveehi134" path="res://images/logos/logo-RTP-white.png" id="1_6ban0"]
 [ext_resource type="Theme" uid="uid://dlwpgtq4i50gd" path="res://themes/MainTheme.tres" id="1_53vtf"]
 [ext_resource type="Script" uid="uid://dcacrtvu3axrd" path="res://scripts/main-menu.gd" id="2_drwb3"]
-[ext_resource type="Script" uid="uid://bbrylq57i04bn" path="res://scripts/btn-play.gd" id="4_1g47l"]
-[ext_resource type="Script" uid="uid://vc2m233u6iy4" path="res://scripts/btn-options.gd" id="4_w1xj6"]
-[ext_resource type="Script" uid="uid://3702xfe86jib" path="res://scripts/btn-quit.gd" id="5_1utrv"]
-[ext_resource type="PackedScene" uid="uid://c8gq6vsbamjjk" path="res://scenes/gui/popups/popup-confirm.tscn" id="5_pplba"]
+[ext_resource type="Script" uid="uid://bbrylq57i04bn" path="res://scripts/btns/btn-play.gd" id="4_1g47l"]
+[ext_resource type="Script" uid="uid://vc2m233u6iy4" path="res://scripts/btns/btn-options.gd" id="4_w1xj6"]
+[ext_resource type="Script" uid="uid://3702xfe86jib" path="res://scripts/btns/btn-quit.gd" id="5_1utrv"]
 
 [node name="gui-control" type="Control"]
 layout_mode = 3
@@ -112,6 +111,3 @@ size_flags_horizontal = 3
 [node name="ColorRect" type="ColorRect" parent="hbox-a/r-column"]
 layout_mode = 2
 color = Color(0.564706, 0.305882, 0.333333, 1)
-
-[node name="popup-confirm" parent="." instance=ExtResource("5_pplba")]
-visible = false

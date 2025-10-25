@@ -16,23 +16,27 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
-SceneManager="*res://scripts/mgr-scene.gd"
+SceneManager="*res://scripts/mgrs/mgr-scene.gd"
 AudioController="*res://scenes/audio_controller.tscn"
+GlobalCursor="*res://scenes/cursor.tscn"
+SettingsManager="*res://scripts/mgrs/mgr-global-settings.gd"
+PopupManager="*res://scripts/mgrs/mgr-popup.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/mode=3
+window/size/viewport_width=640
+window/size/viewport_height=360
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/subwindows/embed_subwindows=false
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
+window/vsync/vsync_mode=0
 
 [gui]
 
 theme/custom="uid://dlwpgtq4i50gd"
+theme/custom_font="uid://udjdlomqjtsn"
 
 [input]
 
