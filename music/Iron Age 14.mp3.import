@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp2gw5u2fbwr"
+path="res://.godot/imported/Iron Age 14.mp3-8a9c3799e99cd3f07084adcacca3eff5.mp3str"
+
+[deps]
+
+source_file="res://music/Iron Age 14.mp3"
+dest_files=["res://.godot/imported/Iron Age 14.mp3-8a9c3799e99cd3f07084adcacca3eff5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

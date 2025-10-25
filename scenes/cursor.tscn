@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqmdimb36a2mm"]
+
+[ext_resource type="Script" uid="uid://bhbf5sqey46ti" path="res://scripts/cursor.gd" id="1_ndevg"]
+[ext_resource type="Texture2D" uid="uid://byx7riiriglwh" path="res://images/cursors/cursor-arrow.png" id="2_ndevg"]
+[ext_resource type="Texture2D" uid="uid://cvx748qrtrti5" path="res://images/TileHighlightpng.png" id="3_n5qf0"]
+[ext_resource type="Texture2D" uid="uid://diakm70qial4d" path="res://images/cursors/cursor-ibeam.png" id="3_pey64"]
+
+[node name="Cursor" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_ndevg")
+cursor_texture = ExtResource("2_ndevg")
+ibeam_texture = ExtResource("3_pey64")
+highlight_texture = ExtResource("3_n5qf0")
+
+[node name="TileHighlight" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.137255)
+z_index = 100
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("3_n5qf0")
+expand_mode = 5
+
+[node name="Container" type="Control" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 16.0
+offset_bottom = 16.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CursorSprite" type="TextureRect" parent="Container"]
+z_index = 4096
+layout_mode = 2
+offset_left = -7.0
+offset_top = -1.0
+offset_right = 25.0
+offset_bottom = 31.0
+texture = ExtResource("2_ndevg")
+
+[node name="iBeamSprite" type="TextureRect" parent="Container"]
+visible = false
+z_index = 100
+layout_mode = 2
+offset_left = -10.0
+offset_top = -2.0
+offset_right = 22.0
+offset_bottom = 30.0
+texture = ExtResource("3_pey64")

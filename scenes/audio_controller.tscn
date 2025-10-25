@@ -1,0 +1,45 @@
+[gd_scene load_steps=14 format=3 uid="uid://cj755t6vwd586"]
+
+[ext_resource type="Script" uid="uid://bicosvsbbbpdu" path="res://scripts/audio_controller.gd" id="1_41o6r"]
+[ext_resource type="AudioStream" uid="uid://cl2msyq454l87" path="res://music/Iron Age 05.mp3" id="2_2e0id"]
+[ext_resource type="AudioStream" uid="uid://d0jh3ila24jql" path="res://music/Iron Age 06.mp3" id="3_lp5i4"]
+[ext_resource type="AudioStream" uid="uid://btamwxqhat01g" path="res://music/Iron Age 09.mp3" id="4_acs82"]
+[ext_resource type="AudioStream" uid="uid://cgatrk2e7gx5v" path="res://music/Iron Age 10.mp3" id="5_isvu6"]
+[ext_resource type="AudioStream" uid="uid://1c7x5yuef7om" path="res://music/Iron Age 11.mp3" id="6_gvmlv"]
+[ext_resource type="AudioStream" uid="uid://bvlkf2tsameiu" path="res://music/Iron Age 12.mp3" id="7_rd1cr"]
+[ext_resource type="AudioStream" uid="uid://dp2gw5u2fbwr" path="res://music/Iron Age 14.mp3" id="8_a6m8s"]
+[ext_resource type="AudioStream" uid="uid://835gpdbjkm10" path="res://music/Iron Age 15.mp3" id="9_e6idr"]
+[ext_resource type="AudioStream" uid="uid://cbq5omthspav8" path="res://sounds/clicks/Click08.wav" id="10_isvu6"]
+[ext_resource type="AudioStream" uid="uid://clf85hqktu2dd" path="res://sounds/clicks/Click09.wav" id="11_gvmlv"]
+[ext_resource type="AudioStream" uid="uid://c1cehem06yyta" path="res://sounds/clicks/Click10.wav" id="12_rd1cr"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_65sif"]
+shuffle = true
+loop = false
+stream_count = 8
+stream_0 = ExtResource("2_2e0id")
+stream_1 = ExtResource("3_lp5i4")
+stream_2 = ExtResource("4_acs82")
+stream_3 = ExtResource("5_isvu6")
+stream_4 = ExtResource("6_gvmlv")
+stream_5 = ExtResource("7_rd1cr")
+stream_6 = ExtResource("8_a6m8s")
+stream_7 = ExtResource("9_e6idr")
+
+[node name="AudioController" type="Node"]
+script = ExtResource("1_41o6r")
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamPlaylist_65sif")
+
+[node name="click-8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_isvu6")
+volume_db = 4.0
+
+[node name="click-9" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_gvmlv")
+volume_db = 10.0
+
+[node name="click-10" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_rd1cr")
+volume_db = 1.0
